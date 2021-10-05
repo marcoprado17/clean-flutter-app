@@ -5,8 +5,15 @@ import 'package:get/get.dart';
 import 'ui/components/components.dart';
 import 'main/factories/factories.dart';
 
+import 'package:ForDev/main.dart' as last_stable;
+
 void main() {
-  runApp(App());
+  var versionToRun = "current";
+  if(versionToRun == "last_stable") {
+    runApp(last_stable.App());
+  } else {
+    runApp(App());
+  }
 }
 
 class App extends StatelessWidget {
